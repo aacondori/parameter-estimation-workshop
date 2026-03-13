@@ -129,12 +129,12 @@ Read "Newton's Law of Cooling: History and Physics" (3-page article)
 ### Task 2: Pluto Exploration (40 minutes)
 Complete interactive notebook: `Forward-Problems.jl`
 
-- Manipulate sliders for A (ambient), k (rate constant), u₀ (initial temp)
+- Manipulate sliders for $A$ (ambient), $k$ (rate constant), $u_0$ (initial temp)
 - Answer embedded questions about parameter effects
 - Try to match model to your experimental data
 
 ### Task 3: Verify the Solution (30 minutes)
-On paper, verify that u(t) = A + (u₀ - A)e^(-kt) satisfies the differential equation du/dt = -k(u - A)
+On paper, verify that $u(t) = A + (u_0 - A)e^{-kt}$ satisfies the differential equation $\frac{du}{dt} = -k(u - A)$
 
 ---
 

@@ -19,10 +19,10 @@ Day 2 transforms students from data collectors into parameter estimators. They l
 - **Model validation:** Assess R² vs. physical validity
 
 ### Mathematical Concepts
-- Exponential solution: u(t) = A + (u₀ - A)e^(-kt)
-- Differential equations: du/dt = -k(u - A)
+- Exponential solution: $u(t) = A + (u_0 - A)e^{-kt}$
+- Differential equations: $\frac{du}{dt} = -k(u - A)$
 - Logarithmic transformation for linearization
-- Parameter meanings: A (ambient), k (rate), u₀ (initial)
+- Parameter meanings: $A$ (ambient), $k$ (rate), $u_0$ (initial)
 
 ### Technical Skills
 - Define and evaluate Julia functions
@@ -45,8 +45,8 @@ Day 2 transforms students from data collectors into parameter estimators. They l
 | 11:45-12:00 | Three-Point Problem | Formulate specific estimation problem |
 
 **Key Concepts:**
-- **Forward problem:** Given A, k, u₀ → compute u(t)
-- **Inverse problem:** Given measurements → estimate A, k
+- **Forward problem:** Given $A$, $k$, $u_0$ → compute $u(t)$
+- **Inverse problem:** Given measurements → estimate $A$, $k$
 - **Why inverse is harder:** No closed form, sensitivity to noise, multiple approximate solutions
 
 ### Afternoon Session (1:00 PM - 5:00 PM)
@@ -67,14 +67,14 @@ Day 2 transforms students from data collectors into parameter estimators. They l
 ## The Profiling Algorithm
 
 ### The Challenge
-Parameter estimation for u(t) = A + (u₀ - A)e^(-kt) is a nonlinear problem with two unknowns (A and k).
+Parameter estimation for $u(t) = A + (u_0 - A)e^{-kt}$ is a nonlinear problem with two unknowns ($A$ and $k$).
 
 ### The Key Insight
-If we *guess* A, the problem becomes linear:
+If we *guess* $A$, the problem becomes linear:
 
-1. Take logarithms: ln(u - A) = ln(u₀ - A) - kt
-2. This is linear: Y = b + mt where Y = ln(u-A), m = -k
-3. Use simple linear regression to find k
+1. Take logarithms: $\ln(u - A) = \ln(u_0 - A) - kt$
+2. This is linear: $Y = b + mt$ where $Y = \ln(u-A)$, $m = -k$
+3. Use simple linear regression to find $k$
 
 ### The Algorithm
 
@@ -179,14 +179,14 @@ Students learn that statistical fit ≠ physical correctness:
 
 ### Check 1: Does A match room temperature?
 - Should be within a few degrees
-- Example: Room = 72°F, fitted A = 365°F → **INVALID**
+- Example: Room = 72°F, fitted $A$ = 365°F → **INVALID**
 
 ### Check 2: Is k positive?
 - Required for cooling/heating to equilibrium
-- Negative k indicates model failure
+- Negative $k$ indicates model failure
 
 ### Check 3: Is k reasonable for the material?
-- Metals typically cool faster (larger k) than ceramic
+- Metals typically cool faster (larger $k$) than ceramic
 - Compare with literature values if available
 
 ### Check 4: Visual fit quality
@@ -230,7 +230,7 @@ Clean up `day2_profiling.jl`:
 With your partner, brainstorm potential questions for Day 3:
 - How does container material affect cooling rate?
 - How sensitive are parameters to measurement timing errors?
-- Do containers with same material show consistent k values?
+- Do containers with same material show consistent $k$ values?
 
 Write down 2-3 candidate questions.
 

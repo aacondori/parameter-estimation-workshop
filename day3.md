@@ -72,7 +72,7 @@ On the final day, students transition from individual parameter estimation to co
 
 **Analysis Steps:**
 1. Pool data from all pairs (10 ceramic, 10 metal, 10 plastic)
-2. Compute mean k and standard deviation for each material
+2. Compute mean $k$ and standard deviation for each material
 3. Create comparison visualization (bar chart with error bars or box plots)
 4. Consider: Are differences statistically significant?
 
@@ -212,7 +212,7 @@ Students create 5-minute presentations with these components:
 *[Insert your key plot]*
 
 **3. Tell** - Interpretation in plain language  
-*"We found that metal containers cooled 60% faster than ceramic containers, with rate constants of 0.14 vs. 0.08 min⁻¹."*
+*"We found that metal containers cooled 60% faster than ceramic containers, with rate constants of $k = 0.14$ vs. $k = 0.08$ min⁻¹."*
 
 **4. Qualify** - Acknowledge limitations  
 *"However, our measurements had ±2°F uncertainty, and we didn't control for container wall thickness."*
