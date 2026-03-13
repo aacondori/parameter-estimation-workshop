@@ -1,0 +1,8 @@
+theme: jekyll-theme-cayman
+title: Parameter Estimation Workshop
+description: A three-day intensive workshop on Newton's Law of Cooling for high school students
+
+# Enable LaTeX math rendering with MathJax
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
