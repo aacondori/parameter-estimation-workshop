@@ -41,12 +41,18 @@ An immersive experience where students design experiments, collect data, build m
 
 ## Phase Two: Extended Research Project
 
-Following the intensive workshop, up to 10 students (5 pairs) continue into a semester-long research experience. Students explore advanced topics including:
+Following the intensive workshop, up to 10 students (5 pairs) continue into an extended research experience running September through mid-November. Each pair selects one research project from seven options spanning theory, computation, experimental design, and data analysis.
 
-- Closed-form solutions for three-point problems
-- Concavity conditions and existence theorems
-- Sensitivity analysis and ill-conditioning
-- Generalizations to time-varying ambient temperature
+**Projects explore questions like:**
+- What happens when the environment itself is changing?
+- When do simple models break, and when is complexity justified?
+- How does experimental timing affect what you can learn?
+- Can you trust your answer when data is imperfect?
+
+**Format:**
+- Virtual mentorship + monthly in-person meetings
+- Paired with faculty mentor and undergraduate coding mentor
+- Culminates in research symposium with poster and oral presentations
 
 **[Learn more about Phase Two projects](phase2-projects.md)**  
 **[Phase Two symposium event](phase2-event.md)**

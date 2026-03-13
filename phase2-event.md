@@ -6,7 +6,7 @@
 
 ## Event Overview
 
-The Research Symposium is the culminating event of Phase Two, where student pairs present their semester-long research to an audience of peers, family, faculty, and community members. This is not just a presentation—it's a celebration of intellectual courage, persistence through confusion, and the transformation from students who consume mathematics to researchers who create it.
+The Research Symposium is the culminating event of Phase Two, where student pairs present their semester-long research to an audience of peers, family, faculty, and community members. This is not just a presentation—it's a celebration of intellectual courage, persistence, and the transformation from students who consume mathematics to researchers who create it.
 
 **Date:** Mid-November [TBD]  
 **Time:** 1:00 PM - 5:00 PM  
