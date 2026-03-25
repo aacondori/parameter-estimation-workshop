@@ -147,7 +147,7 @@ In this notebook, you'll explore the "forward problem", that is, given values fo
 ### Task 3: Check the Math (30 minutes)
 Using pencil and paper, show that $u(t) = A + (u_0 - A)e^{-kt}$ is a solution to the differential equation $\frac{du}{dt} = k(A-u)$.
 
-*Hint: Take the derivative of $u(t)$ and simplify. You should get the right-hand side of the equation.*
+*Hint:* Take the derivative of $u(t)$ and simplify. You should get the right-hand side of the equation.
 
 ---
 
