@@ -22,6 +22,7 @@ An immersive experience where students design experiments, collect data, build m
 
 | Workshop Day | Theme | Focus |
 |--------------|-------|-------|
+| **[Day 0](day0.md)** | Preliminaries | Software setup, math review (complete before workshop) |
 | **[Day 1](day1.md)** | From Real Phenomena to Data | Experimental design, data collection, visualization |
 | **[Day 2](day2.md)** | From Data to Model Parameters | Writing equations, finding values that make models work, coding the solution |
 | **[Day 3](day3.md)** | From Results to Insights | Analysis, career connections, presentations |

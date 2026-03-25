@@ -20,9 +20,9 @@ Day 2 transforms students from data collectors into model builders. They learn t
 
 ### Mathematical Concepts
 - Exponential solution: $u(t) = A + (u_0 - A)e^{-kt}$
-- Differential equations: $\frac{du}{dt} = -k(u - A)$
+- Differential equations: $\frac{du}{dt} = k(A - u)$
 - Logarithmic transformation for linearization
-- Parameter meanings: $A$ (ambient), $k$ (rate), $u_0$ (initial)
+- Parameter meanings: $A$ (ambient temperature), $k$ (rate), $u_0$ (initial temperature)
 
 ### Technical Skills
 - Define and evaluate Julia functions
