@@ -123,7 +123,7 @@ Each pair receives:
 
 ### Undergraduate Mentor (FGCU Math Major)
 - Coding support and debugging help
-- Day-to-day communication via Slack
+- Day-to-day communication via Slack/Teams
 - Peer perspective on learning process
 
 ### Peer Pairs

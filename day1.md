@@ -145,7 +145,7 @@ In this notebook, you'll explore the "forward problem", that is, given values fo
 - Try to match model to your experimental data
 
 ### Task 3: Check the Math (30 minutes)
-Using pencil and paper, show that $u(t) = A + (u_0 - A)e^{-kt}$ is a solution to the differential equation $\frac{du}{dt} = k(A-u)$.
+Using pencil and paper, show that $$u(t) = A + (u_0 - A)e^{-kt}$$ is a solution to the differential equation $$\frac{du}{dt} = k(A-u).$$
 
 *Hint:* Take the derivative of $u(t)$ and simplify. You should get the right-hand side of the equation.
 
@@ -165,4 +165,4 @@ By the end of Day 1, students should be able to:
 
 ---
 
-[← Back to Main Page](README.md) | [Next: Day 2 →](day2.md)
+[← Day 0](day0.md) | [Back to Main Page](README.md) | [Next: Day 2 →](day2.md)

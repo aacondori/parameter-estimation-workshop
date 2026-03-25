@@ -9,7 +9,9 @@
 The Parameter Estimation and Inverse Problems program introduces high school students with interests in mathematics and scientific computing to authentic research through hands-on exploration of Newton's Law of Cooling.
 
 **Program Director:** [Alberto A. Condori, Ph.D.](https://www.fgcu.edu/directory/acondori), Florida Gulf Coast University  
+
 **Duration:** Three-day intensive workshop (Phase One); extended research opportunity (Phase Two, up to 10 students)
+
 **Participants:** 30 students in Phase One; up to 10 continue to Phase Two.
 
 ---

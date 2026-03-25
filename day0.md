@@ -8,7 +8,7 @@
 
 Before the workshop begins, please complete the setup steps below. This ensures we can dive straight into experiments and coding on Day 1 without technical delays.
 
-**Time Estimate:** 45-60 minutes  
+**Time Estimate:** 90 minutes  
 **Deadline:** Complete before Day 1
 
 ---
