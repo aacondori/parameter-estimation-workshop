@@ -6,17 +6,17 @@
 
 ## Overview
 
-Day 2 transforms students from data collectors into parameter estimators. They learn the mathematical theory behind Newton's Law of Cooling, implement the profiling algorithm for parameter estimation, and validate their results against physical constraints.
+Day 2 transforms students from data collectors into model builders. They learn the mathematics behind Newton's Law of Cooling, implement an algorithm to find the values that make the model match their data, and check whether the results make physical sense.
 
 ---
 
 ## Learning Outcomes
 
 ### Core Skills
-- **Model interpretation:** Understand exponential decay and parameter meanings
-- **Forward vs. inverse problems:** Distinguish between prediction and estimation
-- **Profiling technique:** Implement dimensional reduction for optimization
-- **Model validation:** Assess R² vs. physical validity
+- **Model interpretation:** Understand what the exponential model means and what each value represents or controls
+- **Forward vs. inverse problems:** Distinguish between using a fixed model to predict data and using data to determine the best model
+- **Profiling technique:** Use a clever trick to simplify the search for best-fit values
+- **Model validation:** Check if results make physical sense, not just statistical sense
 
 ### Mathematical Concepts
 - Exponential solution: $u(t) = A + (u_0 - A)e^{-kt}$
@@ -36,45 +36,49 @@ Day 2 transforms students from data collectors into parameter estimators. They l
 
 ### Morning Session (9:00 AM - 12:00 PM)
 
-| Time | Activity | Description |
+| Time Slot | Activity | Description |
 |------|----------|-------------|
 | 9:00-9:15 | Homework Debrief | Share insights from forward problems exploration |
 | 9:15-10:30 | Exponential Model | Parameter meanings, verification, Pluto demo |
 | 10:30-10:45 | *Break* | |
 | 10:45-11:45 | Forward vs. Inverse | Define problem types, explore difficulty of inverse problems |
 | 11:45-12:00 | Three-Point Problem | Formulate specific estimation problem |
+| 12:00-1:00 | *Lunch* | Provided—refuel before coding! |
 
 **Key Concepts:**
 - **Forward problem:** Given $A$, $k$, $u_0$ → compute $u(t)$
 - **Inverse problem:** Given measurements → estimate $A$, $k$
-- **Why inverse is harder:** No closed form, sensitivity to noise, multiple approximate solutions
+- **Why inverse is harder:** No simple formula, small errors in data cause big changes in answers, multiple "close enough" solutions
 
 ### Afternoon Session (1:00 PM - 5:00 PM)
 
-| Time | Activity | Description |
+| Time Slot | Activity | Description |
 |------|----------|-------------|
-| 1:00-2:15 | Profiling Technique | Algorithm explanation, live demo |
+| 1:00-2:15 | Profiling Technique | How the algorithm works, live demo |
 | 2:15-2:30 | *Break* | |
-| 2:30-3:30 | Implementation | Code profiling algorithm in VS Code |
-| 3:30-4:00 | Analyzing Results | Compare fits, discuss material differences |
+| 2:30-3:30 | Implementation | Code the algorithm in pairs (VS Code) |
+| 3:30-4:00 | Analyzing Results | Compare fits across materials, discuss what you found |
 | 4:00-4:15 | *Break* | |
-| 4:15-5:00 | Model Validation | R² vs. physics, sensitivity analysis |
+| 4:15-5:00 | Model Validation | Does it fit? Does it make sense? |
 
-**Key Activity:** Students implement the profiling algorithm that searches over candidate A values and uses linear regression for each.
+**Key Activity:** Students implement the profiling algorithm, a clever approach that:
+- Tests many possible ambient temperature values ($A$)
+- For each guess, uses linear regression to find the best cooling rate ($k$)
+- Picks the combination that best matches your data
 
 ---
 
 ## The Profiling Algorithm
 
 ### The Challenge
-Parameter estimation for $u(t) = A + (u_0 - A)e^{-kt}$ is a nonlinear problem with two unknowns ($A$ and $k$).
+We need to find three unknown values ($A$, $k$, and $u_0$) that make our model match the data—even $u_0$, because our first measurement has error too! Searching for multiple values at once is hard.
 
 ### The Key Insight
-If we *guess* $A$, the problem becomes linear:
+If we *guess* $A$, finding $k$ becomes easy:
 
 1. Take logarithms: $\ln(u - A) = \ln(u_0 - A) - kt$
-2. This is linear: $Y = b + mt$ where $Y = \ln(u-A)$, $m = -k$
-3. Use simple linear regression to find $k$
+2. This looks like a line! $Y = b + mt$ where $Y = \ln(u-A)$ and $m = -k$
+3. Use linear regression (you may have seen this in statistics) to find the slope, which gives us $k$
 
 ### The Algorithm
 
@@ -177,9 +181,9 @@ end
 
 Students learn that statistical fit ≠ physical correctness:
 
-### Check 1: Does A match room temperature?
-- Should be within a few degrees
-- Example: Room = 72°F, fitted $A$ = 365°F → **INVALID**
+### Check 1: Does $A$ match room temperature?
+- Should be close to what you measured
+- Example: Room = 72°F, but fitted $A$ = 365°F → **Something went wrong!**
 
 ### Check 2: Is k positive?
 - Required for cooling/heating to equilibrium
@@ -201,8 +205,8 @@ Students learn that statistical fit ≠ physical correctness:
 - Day 1 experimental measurements
 - Room temperature readings
 
-### Software
-- All Day 1 tools plus LinearAlgebra package
+### Software We'll Use
+- All Day 1 tools plus [LinearAlgebra.jl](https://docs.julialang.org/en/v1/stdlib/LinearAlgebra/) package
 
 ### Resources
 - Profiling algorithm explanatory slides
@@ -227,10 +231,10 @@ Clean up `day2_profiling.jl`:
 - Test with different A_range values
 
 ### Task 3: Research Question (15 minutes)
-With your partner, brainstorm potential questions for Day 3:
-- How does container material affect cooling rate?
-- How sensitive are parameters to measurement timing errors?
-- Do containers with same material show consistent $k$ values?
+With your partner, brainstorm questions you could answer with your data and models:
+- Do metal containers cool faster than ceramic? By how much?
+- What happens to your results if timing measurements are slightly off?
+- Do containers of the same material give similar $k$ values across different pairs?
 
 Write down 2-3 candidate questions.
 
@@ -241,7 +245,7 @@ Write down 2-3 candidate questions.
 By the end of Day 2, students will:
 
 ✓ Understand the difference between forward and inverse problems  
-✓ Implement a sophisticated optimization algorithm  
+✓ Implement an algorithm that finds best-fit values from data
 ✓ Recognize that good statistical fit doesn't guarantee physical validity  
 ✓ Be able to extract parameters from real experimental data  
 ✓ Write documented, reusable mathematical functions  

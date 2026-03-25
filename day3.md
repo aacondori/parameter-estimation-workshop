@@ -6,7 +6,7 @@
 
 ## Overview
 
-On the final day, students transition from individual parameter estimation to comparative analysis and scientific communication. They formulate research questions, analyze patterns across materials, connect with professionals who use modeling in their careers, and present their findings.
+On the final day, students move from finding parameters for their own data to discovering and discussing patterns across the whole class. They formulate research questions, analyze patterns across materials, connect with professionals who use modeling in their careers, and present their findings.
 
 ---
 
@@ -21,8 +21,8 @@ On the final day, students transition from individual parameter estimation to co
 
 ### Analysis Skills
 - Compare parameters across experimental conditions
-- Assess reproducibility and variability
-- Conduct sensitivity analysis
+- Check if different groups get similar answers (reproducibility)
+- Test how small changes in data affect results (sensitivity)
 - Create comparison visualizations
 
 ### Communication Skills
@@ -36,22 +36,23 @@ On the final day, students transition from individual parameter estimation to co
 
 ### Morning Session (9:00 AM - 12:00 PM)
 
-| Time | Activity | Description |
+| Time Slot | Activity | Description |
 |------|----------|-------------|
 | 9:00-9:30 | Research Questions | Finalize question from three options |
 | 9:30-10:45 | Comparative Analysis | Pair work implementing chosen analysis |
 | 10:45-11:00 | *Break* | |
 | 11:00-12:00 | Career Connections Panel | Guest speakers + Q&A |
+| 12:00-1:00 | *Lunch* | Refuel before presentations! |
 
 **Three Research Question Options:**
 
 1. **Material Comparison:** How does k differ across ceramic/metal/plastic?
 2. **Reproducibility:** Do pairs with same material get consistent parameters?
-3. **Sensitivity Analysis:** How do estimates change with small data perturbations?
+3. **Sensitivity Analysis:** How much do answers change if the data has small errors?
 
 ### Afternoon Session (1:00 PM - 5:00 PM)
 
-| Time | Activity | Description |
+| Time Slot | Activity | Description |
 |------|----------|-------------|
 | 1:00-2:00 | Creating Data Stories | Draft written narrative (1 page) |
 | 2:00-2:15 | *Break* | |
@@ -131,9 +132,9 @@ boxplot(["Ceramic"], ceramic_k,
 
 **Analysis Steps:**
 1. Take your original data
-2. Systematically perturb (±2°F, ±30 seconds)
-3. Rerun profiling algorithm
-4. Quantify how much A and k change
+2. Add small artificial errors (±2°F in temperature, ±30 seconds in time)
+3. Re-run the search for best-fit parameters
+4. Quantify how much $A$ and $k$ change
 
 **Sample Code:**
 ```julia
@@ -157,7 +158,8 @@ println("Change in k: $(abs(k_original - result_perturbed.k))")
 ## Career Connections Panel
 
 ### Format
-3-4 professionals (in-person or virtual) share how they use parameter estimation:
+
+Professionals (in-person or virtual) share how they use mathematical models in their work:
 
 | Role | Example Application |
 |------|-------------------|
@@ -228,10 +230,10 @@ Students create 5-minute presentations with these components:
 - All pairs' fitted parameters (shared spreadsheet)
 - Individual experimental data from Day 1
 
-### Software
+### Software We'll Use
 - All previous tools
-- Statistics package for analysis
-- Presentation software (PowerPoint/Google Slides)
+- [Statistics.jl](https://docs.julialang.org/en/v1/stdlib/Statistics/) package for analysis
+- Presentation software (PowerPoint/Google Slides/LaTeX)
 
 ### Resources
 - Careers in Modeling worksheet
@@ -247,7 +249,7 @@ Students create 5-minute presentations with these components:
 
 ### 1. Written Report (3-4 pages)
 - Introduction: What is Newton's Law? Why estimate parameters?
-- Methods: Experimental design, profiling algorithm
+- Methods: Experimental design, how you found best-fit parameters
 - Results: Your data, fitted parameters, analysis findings
 - Discussion: Interpretation, validation, limitations
 - Conclusion: Main takeaway and future questions
@@ -270,7 +272,7 @@ All with comprehensive documentation (docstrings, comments, organization)
 By the end of Day 3, students will:
 
 ✓ Formulate and answer a focused research question  
-✓ Compare results across experimental conditions  
+✓ Discover patterns by comparing results across the class
 ✓ Understand career pathways in mathematical modeling  
 ✓ Communicate technical findings to peers effectively  
 ✓ Produce professional-quality documented code  
@@ -280,13 +282,14 @@ By the end of Day 3, students will:
 
 ## Phase Two Preview
 
-**For Continuing Students:**
+**Seeking Deeper Research Engagement?**
+
+Phase Two offers up to 5 pairs the opportunity for semester-long mentorship and a research symposium experience.
+
 - Application opens next week
-- Up to 10 students (5 pairs) selected
-- Fall semester research project
-- Topics: Closed-form solutions, concavity conditions, sensitivity analysis
+- Seven research projects spanning theory, computation, and experimental design ([see projects](phase2-projects.md))
 - Mentorship from university faculty and undergraduates
-- Culminates in symposium presentation
+- Culminates in poster and oral presentations at university symposium
 
 ---
 

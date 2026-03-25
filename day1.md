@@ -15,16 +15,16 @@ On Day 1, students transition from abstract concepts to hands-on experimentation
 ### Core Skills
 - **Data fundamentals:** Understand data, variables, and datasets
 - **Experimental workflow:** Collect → explore → model → communicate
-- **Measurement error:** Recognize sources of noise and uncertainty
+- **Measurement error:** Understand why repeated measurements give slightly different results
 - **Controlled experiments:** Design rigorous experiments with proper controls
 
 ### Technical Skills
-- **Pluto notebooks:** Interactive exploration and reactive computing
-- **VS Code:** Production coding environment
-- **Julia vectors:** Data structures for measurements
-- **Plotting:** Create scatterplots with Plots.jl
+- **Pluto notebooks:** Interactive notebooks where changes update all dependencies instantly
+- **VS Code:** Professional coding environment
+- **Julia vectors:** Lists of numbers for storing measurements
+- **Plotting:** Create scatterplots to visualize your data
 
-### Collaboration
+### Collaboration and Communication
 - **Pair work:** Collaborate effectively throughout the day
 - **Peer explanation:** Communicate findings to other students
 
@@ -34,29 +34,38 @@ On Day 1, students transition from abstract concepts to hands-on experimentation
 
 ### Morning Session (9:00 AM - 12:00 PM)
 
-| Time | Activity | Description |
-|------|----------|-------------|
-| 9:00-9:30 | Welcome & Overview | Program goals, Newton's Law introduction, form pairs |
-| 9:30-10:15 | What is Data? | Define data/variables/datasets; discuss measurement error |
+| Time Slot | Activity | Description |
+|-----------|----------|-------------|
+| 9:00-9:30 | Welcome & Overview | Program goals, Newton's Law introduction, meet your partner |
+| 9:30-10:15 | What is Data? | Define data, variables, and datasets. Discuss measurement error |
 | 10:15-10:30 | *Break* | |
 | 10:30-11:30 | Designing Our Experiment | Identify controlled variables, complete design worksheet |
 | 11:30-12:00 | Preparation | Set up experimental stations, practice measurements |
+| 12:00-1:00 | *Lunch* | Provided—refuel before the afternoon experiment! |
 
 **Key Activity:** Students design a controlled experiment to investigate: *"How does container material affect cooling rate?"*
 
+This means deciding:
+- What to change (container material)
+- What to measure (temperature over time)
+- What to keep the same (water amount, starting temperature, room conditions, timing)
+
 ### Afternoon Session (1:00 PM - 5:00 PM)
 
-| Time | Activity | Description |
-|------|----------|-------------|
-| 1:00-2:00 | Conduct Experiment | Collect temperature measurements every 2 minutes for 20 minutes |
-| 2:00-2:15 | *Break* | |
-| 2:15-3:15 | Visualizing Data | Live coding: Create scatterplots in VS Code |
+| Time Slot | Activity | Description |
+|-----------|----------|-------------|
+| 1:00-2:00 | Conduct Experiment | Collect data, enter into class-wide shared spreadsheet (Teams) |
+| 2:00-3:15 | Visualizing Data | Live coding in pairs: Create scatterplots in VS Code |
 | 3:15-3:30 | Gallery Walk | Peer review of plots, observe patterns across materials |
-| 3:30-4:15 | Describing Patterns | Pluto demo: Vocabulary for describing data trends |
+| 3:30-4:15 | Describing Patterns | Pluto demo: Describing what your cooling curve shows |
 | 4:15-4:30 | *Break* | |
 | 4:30-5:00 | Wrap-Up | Share findings, preview Day 2 |
 
-**Key Activity:** Each pair creates their first Julia script (`day1_my_experiment.jl`) to visualize their cooling data.
+**Key Activities:** 
+- Each pair creates their first Julia script (`day1_my_experiment.jl`) to visualize their cooling data
+- Connect everyday descriptions to mathematical vocabulary:
+  - "Temperature drops fast at first, then slows down" → *decreasing, concave up*
+  - "Approaches room temperature but never quite reaches it" → *horizontal asymptote*
 
 ---
 
@@ -101,11 +110,11 @@ savefig("day1_cooling_curve.png")
 - Data recording sheet
 - Access to hot water station
 
-### Software
-- Julia 1.11+ installed
+### Software We'll Use
+- Julia 1.11+
 - VS Code with Julia extension
-- Pluto.jl package
-- Plots.jl package
+- [Pluto.jl](https://plutojl.org/) package
+- [Plots.jl](https://docs.juliaplots.org/stable/#Intro-to-Plots-in-Julia) package
 
 ### Resources
 - Experimental Design Worksheet
@@ -117,7 +126,7 @@ savefig("day1_cooling_curve.png")
 ## Homework Assignment
 
 **Due:** Before Day 2 (evening of Day 1)  
-**Time Estimate:** 60-90 minutes
+**Time Estimate:** 90 minutes
 
 ### Task 1: Reading (20 minutes)
 Read "Newton's Law of Cooling: History and Physics" (3-page article)
@@ -129,26 +138,30 @@ Read "Newton's Law of Cooling: History and Physics" (3-page article)
 ### Task 2: Pluto Exploration (40 minutes)
 Complete interactive notebook: `Forward-Problems.jl`
 
-- Manipulate sliders for $A$ (ambient), $k$ (rate constant), $u_0$ (initial temp)
+In this notebook, you'll explore the "forward problem", that is, given values for the model, predict what the temperature will be.
+
+- Use sliders to adjust $A$ (ambient temperature), $k$ (cooling rate), and $u_0$ (starting temperature)
 - Answer embedded questions about parameter effects
 - Try to match model to your experimental data
 
-### Task 3: Verify the Solution (30 minutes)
-On paper, verify that $u(t) = A + (u_0 - A)e^{-kt}$ satisfies the differential equation $\frac{du}{dt} = -k(u - A)$
+### Task 3: Check the Math (30 minutes)
+Using pencil and paper, show that $u(t) = A + (u_0 - A)e^{-kt}$ is a solution to the differential equation $\frac{du}{dt} = k(A-u)$.
+
+*Hint: Take the derivative of $u(t)$ and simplify. You should get the right-hand side of the equation.*
 
 ---
 
 ## Key Takeaways
 
-By the end of Day 1, students will:
+By the end of Day 1, students should be able to:
 
 ✓ Understand that data comes from deliberate experimental design  
-✓ Recognize that all measurements contain error and noise  
+✓ Understand why real measurements are never perfectly precise  
 ✓ Be able to create scientific visualizations in Julia  
 ✓ Describe patterns in temperature-time data qualitatively  
 ✓ Work effectively with a partner on technical tasks  
 
-**Tomorrow's Preview:** We'll build a mathematical model to *predict* these patterns and estimate the parameters from our data.
+**Tomorrow's Preview:** We'll build a mathematical model to *predict* these patterns and find the values that make the model match our data.
 
 ---
 

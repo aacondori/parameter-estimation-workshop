@@ -55,7 +55,7 @@ All research pairs display posters simultaneously, showcasing projects that span
 
 Each pair gives a 10-minute presentation (8 min talk + 2 min Q&A):
 
-| Time | Presentation |
+| Time Slot | Presentation |
 |------|-------------|
 | 3:15-3:25 | Project 1: When the Environment Won't Cooperate |
 | 3:25-3:35 | Project 2: The Inside Story |

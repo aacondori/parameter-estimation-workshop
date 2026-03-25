@@ -252,16 +252,16 @@ Students are evaluated on:
 ## Frequently Asked Questions
 
 **Q: Can I participate if I'm not planning to major in math?**  
-A: Absolutely! Phase Two students have gone on to major in engineering, computer science, physics, economics, and other fields where mathematical modeling is valuable.
+A: Absolutely! Many former research mentees have gone on to major in engineering, computer science, physics, economics, and other fields where mathematical modeling is valuable.
 
 **Q: How are projects assigned to pairs?**  
 A: After acceptance, you'll have conversations with mentors about your interests and strengths. Project assignments balance student preferences with program capacity and mentor expertise.
 
 **Q: What mathematical background do I need?**  
-A: If you succeeded in Phase One, you have the foundation. Each project builds on Calculus I and strong algebra, introducing additional concepts as needed through readings and mentor guidance.
+A: After completing Phase One, you have the foundation. Each project builds on calculus, strong algebra, and scientific computing, while introducing additional concepts as needed through readings and mentor guidance.
 
 **Q: What if we get stuck?**  
-A: That's expected! Your mentors are there to help you work through challenges. Getting unstuck is part of the research process — and often where the deepest learning happens.
+A: That's expected! Mentors are there to help you work through challenges. Getting unstuck is part of the research process — and often where the deepest learning happens.
 
 ---
 
